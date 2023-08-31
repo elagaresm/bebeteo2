@@ -41,11 +41,9 @@ function changeBg(bg, title, color) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var carousel = document.querySelector(".carousel");
-  var instances = M.Carousel.init(carousel, {
-    indicators: true,
-  });
+  var instances = M.Carousel.init(carousel, {});
   carousel.children[instances.center].click();
 });
 

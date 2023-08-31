@@ -37,38 +37,148 @@
     background-color: var(--hover);
 }
 
+
+
+
 body {
-    background-color: black;
     font-family: 'Poppins', sans-serif;
     color: white;
-    /* delete later */
-}
-
-header {
-    display: grid;
-    place-content: center;
-}
-
-.logo {
-    filter: invert(1);
-    height: 10vh;
-}
-
-.main {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    /* padding: 0 100px; */
+    background-image: url(../images/backgrounds/bg-purple.jpeg);
+    min-width: 100dvw;
+    min-height: 100dvh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    /* gap: 100px; */
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
     transition: all 500ms ease-out 500ms;
 
-    .carousel-box {}
+    & header {
+        display: grid;
+        place-content: center;
+        margin-bottom: 1rem;
+
+        .logo {
+            filter: invert(1);
+            height: 10vh;
+        }
+    }
+
+    .carousel-box {
+        background-color: white;
+        width: 90%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+
+        .play {
+            color: white;
+            text-transform: uppercase;
+            padding: 0.75rem;
+            border-radius: 5px;
+            transition: 200ms ease-out;
+
+            &:hover,
+            &:focus {
+                color: gray;
+                transform: scale(0.95);
+            }
+        }
+
+        .carousel {
+            width: 90%;
+            height: 250px;
+
+            .carousel-item {
+                width: 200px;
+                height: 250px;
+
+                & img {
+                    aspect-ratio: 4 / 5;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+
+    .content {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        .tags {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1rem;
+
+            .tag {
+                flex: 1 1 100%;
+                padding: 0.75rem;
+                border: 1px solid;
+                box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+                background: rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(5px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .spiceness {
+
+                & i.active {
+                    color: orangered;
+                }
+            }
+        }
+
+        & p {
+            margin-bottom: 1rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            width: max-content;
+
+            & a {
+                padding: 0.75rem 1.5rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                background-color: var(--background, black);
+                color: var(--foreground, white);
+                box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+
+                &:nth-child(2) {
+                    color: white;
+                    background: rgba(0, 0, 0, 0.2);
+                }
+
+                &:hover,
+                &:focus {
+                    color: gray;
+                }
+            }
+        }
+    }
+
+    .socials {
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+
+        & li {
+        }
+    }
 }
