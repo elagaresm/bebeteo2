@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bebeteo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- my js -->
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#"><img class="logo" src="images/logo-transparente.png" alt=""></a>
+    </header>
+
+    <div class="main">
+
+        <div class="carousel-box">
+
+            <div class="carousel">
+
+                <div class="carousel-item"
+                    onclick="changeBg('bg-black', 'do-or-drink', [ 'rgb(255, 255, 255)', 'rgb(0, 0, 0)', 'rgba(255, 255, 255, 0.5)' ])">
+                    <img src="images/games/do-or-drink.jpg" alt="">
+                </div>
+
+                <div class="carousel-item"
+                    onclick="changeBg('bg-green', 'do-or-drink-christmas', [ 'rgb(41, 69, 34)', 'rgb(255, 255, 255)', 'rgb(41, 69, 34)' ])">
+                    <img src="images/games/do-or-drink-christmas.jpg" alt="">
+                </div>
+
+                <div class="carousel-item" onclick="changeBg('bg-yellow', 'jumo', [ '#ff8e00', 'white', '#ff8e00' ])">
+                    <img src="images/games/jumo.jpg" alt="">
+                </div>
+
+                <div class="carousel-item"
+                    onclick="changeBg('bg-red', 'do-or-drink-evil', [ 'rgb(163, 3, 3)', 'white', 'rgb(163, 3, 3)' ])">
+                    <img src="images/games/do-or-drink-evil.jpg" alt="">
+                </div>
+
+                <div class="carousel-item parshot"
+                    onclick="changeBg('bg-purple', 'parshot', [ '#66028e', 'white', '#66028e' ])">
+                    <img src="images/games/parshot.jpg" alt="">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

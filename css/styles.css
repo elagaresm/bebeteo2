@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #FFFFFF #DFE9EB;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: var(--hover);
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: var(--hover);
+}
+
+body {
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    /* delete later */
+}
+
+header {
+    display: grid;
+    place-content: center;
+}
+
+.logo {
+    filter: invert(1);
+    height: 10vh;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /* padding: 0 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 100px; */
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all 500ms ease-out 500ms;
+
+    .carousel-box {}
+}
