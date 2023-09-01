@@ -12,12 +12,12 @@ function toggleVideo(element) {
   }
 }
 
-function closeTrailer() {
-  const trailer = document.querySelector(".trailer");
-  const video = document.querySelector("video");
-  video.pause();
-  trailer.classList.remove("active");
-}
+// function closeTrailer() {
+//   const trailer = document.querySelector(".trailer");
+//   const video = document.querySelector("video");
+//   video.pause();
+//   trailer.classList.remove("active");
+// }
 
 function changeBg(bg, title) {
   const contents = document.querySelectorAll(".content");
@@ -25,10 +25,6 @@ function changeBg(bg, title) {
   backgrounds.forEach((background) => {
     background.classList.remove("active");
   });
-
-  // document.documentElement.style.setProperty("--bg", color[0]);
-  // document.documentElement.style.setProperty("--fg", color[1]);
-  // document.documentElement.style.setProperty("--hover", color[2]);
 
   document.querySelector(`.${bg}`).classList.add("active");
 
@@ -46,23 +42,23 @@ document.addEventListener("DOMContentLoaded", function () {
   carousel.children[instances.center].click();
 });
 
-function openManual(game) {
-  const manuals = document.querySelectorAll(".manual");
+// function openManual(game) {
+//   const manuals = document.querySelectorAll(".manual");
 
-  manuals.forEach((manual) => {
-    if (manual.classList.contains(game)) {
-      manual.classList.add("active");
-    }
-  });
-}
+//   manuals.forEach((manual) => {
+//     if (manual.classList.contains(game)) {
+//       manual.classList.add("active");
+//     }
+//   });
+// }
 
-function closeManual() {
-  const manuals = document.querySelectorAll(".manual");
+// function closeManual() {
+//   const manuals = document.querySelectorAll(".manual");
 
-  manuals.forEach((x) => {
-    x.classList.remove("active");
-  });
-}
+//   manuals.forEach((x) => {
+//     x.classList.remove("active");
+//   });
+// }
 
 // const blackModal = document.querySelector("[data-modal-black]");
 // const openBlack = document.querySelector("[data-open-black]");
@@ -76,9 +72,38 @@ function closeManual() {
 //   blackModal.close()
 // })
 
-const modals = document.querySelectorAll('[data-modal]')
+const modals = document.querySelectorAll("[data-modal]");
+const openBtns = document.querySelectorAll("[data-open]");
+const closeBtns = document.querySelectorAll("[data-close]");
 
 modals.forEach((modal) => {
   const color = modal.dataset.modal;
-  console.log(color)
-})
+
+  const openBtn = Array.from(openBtns).find((ele) => {
+    return ele.dataset.open == color;
+  });
+
+  const closeBtn = Array.from(closeBtns).find((ele) => {
+    return ele.dataset.close == color;
+  });
+
+  openBtn.addEventListener("click", () => {
+    modal.showModal();
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.close();
+  });
+
+  modal.addEventListener("click", (e) => {
+    const dialogDimensions = modal.getBoundingClientRect();
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      modal.close();
+    }
+  });
+});

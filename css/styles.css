@@ -132,6 +132,10 @@ body {
         opacity: 0;
         transition: 500ms;
 
+        & h2 {
+            text-transform: uppercase;
+        }
+
         &.active {
             display: block;
             visibility: visible;
@@ -291,10 +295,21 @@ dialog {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80dvw;
+    height: 60dvh;
     max-width: 800px;
+    max-height: 1000px;
 
     &::backdrop {
         background-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(20px);
+    }
+
+    & i {
+        position: absolute;
+        color: red;
+        font-size: 3rem;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
     }
 }
