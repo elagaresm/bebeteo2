@@ -42,35 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
   carousel.children[instances.center].click();
 });
 
-// function openManual(game) {
-//   const manuals = document.querySelectorAll(".manual");
-
-//   manuals.forEach((manual) => {
-//     if (manual.classList.contains(game)) {
-//       manual.classList.add("active");
-//     }
-//   });
-// }
-
-// function closeManual() {
-//   const manuals = document.querySelectorAll(".manual");
-
-//   manuals.forEach((x) => {
-//     x.classList.remove("active");
-//   });
-// }
-
-// const blackModal = document.querySelector("[data-modal-black]");
-// const openBlack = document.querySelector("[data-open-black]");
-// const closeBlack = document.querySelector("[data-close-black]");
-
-// openBlack.addEventListener("click", () => {
-//   blackModal.showModal()
-// });
-
-// closeBlack.addEventListener("click", () => {
-//   blackModal.close()
-// })
 
 const modals = document.querySelectorAll("[data-modal]");
 const openBtns = document.querySelectorAll("[data-open]");
