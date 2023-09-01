@@ -21,6 +21,13 @@
 </head>
 
 <body>
+
+    <img class="banner-bg bg-black" src="images/backgrounds/bg-black.jpeg" alt="">
+    <img class="banner-bg bg-green" src="images/backgrounds/bg-green.jpeg" alt="">
+    <img class="banner-bg bg-purple" src="images/backgrounds/bg-purple.jpeg" alt="">
+    <img class="banner-bg bg-yellow" src="images/backgrounds/bg-yellow.jpeg" alt="">
+    <img class="banner-bg bg-red" src="images/backgrounds/bg-red.jpeg" alt="">
+
     <header>
         <a href="#"><img class="logo" src="images/logo-transparente.png" alt=""></a>
     </header>
@@ -29,23 +36,23 @@
     <div class="carousel-box">
         <div class="carousel">
 
-            <div class="carousel-item">
+            <div class="carousel-item" onclick="changeBg('bg-black', 'do-or-drink')">
                 <img src="images/games/do-or-drink.jpg" alt="">
             </div>
 
-            <div class="carousel-item">
+            <div class="carousel-item" onclick="changeBg('bg-green', 'do-or-drink-christmas')">
                 <img src="images/games/do-or-drink-christmas.jpg" alt="">
             </div>
 
-            <div class="carousel-item">
+            <div class="carousel-item" onclick="changeBg('bg-yellow', 'jumo')">
                 <img src="images/games/jumo.jpg" alt="">
             </div>
 
-            <div class="carousel-item">
+            <div class="carousel-item" onclick="changeBg('bg-red', 'do-or-drink-evil')">
                 <img src="images/games/do-or-drink-evil.jpg" alt="">
             </div>
 
-            <div class="carousel-item parshot">
+            <div class="carousel-item parshot" onclick="changeBg('bg-purple', 'parshot')">
                 <img src="images/games/parshot.jpg" alt="">
             </div>
 
@@ -56,9 +63,81 @@
         </a>
     </div>
 
+    <!-- content -->
+    <!-- do or drink -->
+
     <div class="content do-or-drink">
         <!-- <img src="images/titles/do-or-drink.png" alt="" class="game-title"> -->
         <h2>Do or Drink</h2>
+        <div class="tags">
+            <div class="tag"><i class="fa-solid fa-money-bill"></i><span> $1200</span></div>
+            <div class="tag"><i class="fa-solid fa-users"></i><span> 2 - 4</span></div>
+            <div class="tag spiceness">
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+                <i class="fa-solid fa-fire-flame-curved"></i>
+                <i class="fa-solid fa-fire-flame-curved"></i>
+            </div>
+        </div>
+        <p>
+            Picnic salad cherry falafel bites hot green grapes creamy cauliflower alfredo kale strawberry mango
+            smoothie pineapple salsa burritos artichoke hearts veggie burgers lemon red lentil soup dark and stormy
+            cumin dill tomato and basil green papaya salad blueberries miso dressing ghost pepper salad chickpea
+            crust pizza lemon seasonal hearts of palm.
+        </p>
+        <div class="buttons">
+            <a class="waves-effect waves-light btn-medium" href="#!"><i class="fa-solid fa-cart-shopping"></i> Buy
+                now</a>
+            <a class="waves-effect waves-light btn-medium" data-modal-open="black" href="#!" onclick=""><i
+                    class="fa-solid fa-book"></i>
+                Manual</a>
+        </div>
+    </div>
+
+    <dialog data-modal="black">
+        <h1>Do or Drink</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, distinctio!</p>
+        <button data-close>Close</button>
+    </dialog>
+
+    <!-- christmas -->
+
+    <div class="content do-or-drink-christmas">
+        <!-- <img src="images/titles/do-or-drink.png" alt="" class="game-title"> -->
+        <h2>Do or Drink Christmas</h2>
+        <div class="tags">
+            <div class="tag"><i class="fa-solid fa-money-bill"></i><span> $1200</span></div>
+            <div class="tag"><i class="fa-solid fa-users"></i><span> 2 - 4</span></div>
+            <div class="tag spiceness">
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+                <i class="fa-solid fa-fire-flame-curved"></i>
+                <i class="fa-solid fa-fire-flame-curved"></i>
+            </div>
+        </div>
+        <p>
+            This is the christmas related content. Picnic salad cherry falafel bites hot green grapes creamy cauliflower
+            alfredo kale strawberry mango
+            smoothie pineapple salsa burritos artichoke hearts veggie burgers lemon red lentil soup dark and stormy
+            cumin dill tomato and basil green papaya salad blueberries miso dressing ghost pepper salad chickpea
+            crust pizza lemon seasonal hearts of palm.
+        </p>
+        <div class="buttons">
+            <a class="waves-effect waves-light btn-medium" href="#"><i class="fa-solid fa-cart-shopping"></i> Buy
+                now</a>
+            <a class="waves-effect waves-light btn-medium" href="#" onclick=""><i class="fa-solid fa-book"></i>
+                Manual</a>
+        </div>
+    </div>
+
+
+    <!-- jumo -->
+
+    <div class="content jumo">
+        <!-- <img src="images/titles/do-or-drink.png" alt="" class="game-title"> -->
+        <h2>Jumo</h2>
         <div class="tags">
             <div class="tag"><i class="fa-solid fa-money-bill"></i><span> $1200</span></div>
             <div class="tag"><i class="fa-solid fa-users"></i><span> 2 - 4</span></div>
@@ -84,9 +163,71 @@
         </div>
     </div>
 
+    <!-- evil -->
+
+    <div class="content do-or-drink-evil">
+        <!-- <img src="images/titles/do-or-drink.png" alt="" class="game-title"> -->
+        <h2>Do or Drink Evil</h2>
+        <div class="tags">
+            <div class="tag"><i class="fa-solid fa-money-bill"></i><span> $1200</span></div>
+            <div class="tag"><i class="fa-solid fa-users"></i><span> 2 - 4</span></div>
+            <div class="tag spiceness">
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+            </div>
+        </div>
+        <p>
+            Picnic salad cherry falafel bites hot green grapes creamy cauliflower alfredo kale strawberry mango
+            smoothie pineapple salsa burritos artichoke hearts veggie burgers lemon red lentil soup dark and stormy
+            cumin dill tomato and basil green papaya salad blueberries miso dressing ghost pepper salad chickpea
+            crust pizza lemon seasonal hearts of palm.
+        </p>
+        <div class="buttons">
+            <a class="waves-effect waves-light btn-medium" href="#"><i class="fa-solid fa-cart-shopping"></i> Buy
+                now</a>
+            <a class="waves-effect waves-light btn-medium" href="#" onclick=""><i class="fa-solid fa-book"></i>
+                Manual</a>
+        </div>
+    </div>
+
+
+    <!-- parshot -->
+
+    <div class="content parshot">
+        <!-- <img src="images/titles/do-or-drink.png" alt="" class="game-title"> -->
+        <h2>Parshot</h2>
+        <div class="tags">
+            <div class="tag"><i class="fa-solid fa-money-bill"></i><span> $1200</span></div>
+            <div class="tag"><i class="fa-solid fa-users"></i><span> 2 - 4</span></div>
+            <div class="tag spiceness">
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+                <i class="fa-solid fa-fire-flame-curved active"></i>
+                <i class="fa-solid fa-fire-flame-curved"></i>
+                <i class="fa-solid fa-fire-flame-curved"></i>
+            </div>
+        </div>
+        <p>
+            Picnic salad cherry falafel bites hot green grapes creamy cauliflower alfredo kale strawberry mango
+            smoothie pineapple salsa burritos artichoke hearts veggie burgers lemon red lentil soup dark and stormy
+            cumin dill tomato and basil green papaya salad blueberries miso dressing ghost pepper salad chickpea
+            crust pizza lemon seasonal hearts of palm.
+        </p>
+        <div class="buttons">
+            <a class="waves-effect waves-light btn-medium" href="#"><i class="fa-solid fa-cart-shopping"></i> Buy
+                now</a>
+            <a class="waves-effect waves-light btn-medium" href="#" onclick=""><i class="fa-solid fa-book"></i>
+                Manual</a>
+        </div>
+    </div>
+
+
     <!-- socials -->
 
-   <div class="socials fixed-action-btn">
+    <!-- <div class="socials fixed-action-btn">
         <a class="btn-floating btn-large transparent">
             <i class="fa-solid fa-share-nodes"></i>
         </a>
@@ -95,7 +236,7 @@
             <li><a class="btn-floating black darken-1"><i class="fa-brands fa-tiktok"></i></a></li>
             <li><a class="btn-floating green"><i class="fa-brands fa-whatsapp"></i></a></li>
         </ul>
-    </div>
+    </div> -->
 
     <!-- trailer -->
 

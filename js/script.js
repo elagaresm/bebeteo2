@@ -19,19 +19,18 @@ function closeTrailer() {
   trailer.classList.remove("active");
 }
 
-function changeBg(bg, title, color) {
-  const banner = document.querySelector(".banner");
+function changeBg(bg, title) {
   const contents = document.querySelectorAll(".content");
   const backgrounds = document.querySelectorAll(".banner-bg");
   backgrounds.forEach((background) => {
-    background.classList.remove("opacity-1");
+    background.classList.remove("active");
   });
 
-  document.documentElement.style.setProperty("--bg", color[0]);
-  document.documentElement.style.setProperty("--fg", color[1]);
-  document.documentElement.style.setProperty("--hover", color[2]);
+  // document.documentElement.style.setProperty("--bg", color[0]);
+  // document.documentElement.style.setProperty("--fg", color[1]);
+  // document.documentElement.style.setProperty("--hover", color[2]);
 
-  document.querySelector(`.${bg}`).classList.add("opacity-1");
+  document.querySelector(`.${bg}`).classList.add("active");
 
   contents.forEach((content) => {
     content.classList.remove("active");
@@ -64,3 +63,22 @@ function closeManual() {
     x.classList.remove("active");
   });
 }
+
+// const blackModal = document.querySelector("[data-modal-black]");
+// const openBlack = document.querySelector("[data-open-black]");
+// const closeBlack = document.querySelector("[data-close-black]");
+
+// openBlack.addEventListener("click", () => {
+//   blackModal.showModal()
+// });
+
+// closeBlack.addEventListener("click", () => {
+//   blackModal.close()
+// })
+
+const modals = document.querySelectorAll('[data-modal]')
+
+modals.forEach((modal) => {
+  const color = modal.dataset.modal;
+  console.log(color)
+})
