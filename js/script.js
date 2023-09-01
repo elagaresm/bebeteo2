@@ -12,13 +12,6 @@ function toggleVideo(element) {
   }
 }
 
-// function closeTrailer() {
-//   const trailer = document.querySelector(".trailer");
-//   const video = document.querySelector("video");
-//   video.pause();
-//   trailer.classList.remove("active");
-// }
-
 function changeBg(bg, title) {
   const contents = document.querySelectorAll(".content");
   const backgrounds = document.querySelectorAll(".banner-bg");
