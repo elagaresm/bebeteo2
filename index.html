@@ -51,7 +51,7 @@
 
         </div>
 
-        <a href="#" onclick="" class="play">
+        <a href="#" onclick="toggleVideo(this)" class="play">
             <i class="fa-solid fa-film"></i> Watch Preview
         </a>
     </div>
@@ -77,19 +77,43 @@
             crust pizza lemon seasonal hearts of palm.
         </p>
         <div class="buttons">
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i> Buy now</a>
-            <a href="#" onclick=""><i class="fa-solid fa-book"></i> Manual</a>
+            <a class="waves-effect waves-light btn-medium" href="#"><i class="fa-solid fa-cart-shopping"></i> Buy
+                now</a>
+            <a class="waves-effect waves-light btn-medium" href="#" onclick=""><i class="fa-solid fa-book"></i>
+                Manual</a>
         </div>
     </div>
 
     <!-- socials -->
 
-    <ul class="socials">
-        <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-    </ul>
+   <div class="socials fixed-action-btn">
+        <a class="btn-floating btn-large transparent">
+            <i class="fa-solid fa-share-nodes"></i>
+        </a>
+        <ul>
+            <li><a class="btn-floating pink"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a class="btn-floating black darken-1"><i class="fa-brands fa-tiktok"></i></a></li>
+            <li><a class="btn-floating green"><i class="fa-brands fa-whatsapp"></i></a></li>
+        </ul>
+    </div>
 
+    <!-- trailer -->
+
+    <div class="trailer">
+        <video controls=true src="videos/do-or-drink-video.mp4"></video>
+        <i class="close fa-solid fa-xmark" onclick="toggleVideo(this)"></i>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, {
+                direction: 'bottom',
+                hoverEnabled: true,
+            });
+        });
+    </script>
 </body>
 
 </html>
